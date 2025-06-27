@@ -28,8 +28,9 @@ label {
 input[type='number'] {
   border: 1px solid #808080;
   border-radius: 4px;
-  width: 100%;
+  width: 380px;
   height: 40px;
+  stroke: #808080;
 }
 input[type='number']:hover {
   border: 1px solid #000;
