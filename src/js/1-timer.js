@@ -39,6 +39,7 @@ class Timer {
     clearInterval(this.intervalId);
     this.intervalId = null;
     this.isActive = false;
+    dataTimePicker.disabled = false;
   }
   convertMs(ms) {
     const second = 1000;
@@ -89,6 +90,7 @@ flatpickr(dataTimePicker, {
 });
 startBtn.addEventListener('click', () => {
   if (!selectedDate) return;
-  timer.start(selectedDate);
+  dataTimePicker.disabled = true;
   startBtn.disabled = true;
+  timer.start(selectedDate);
 });
